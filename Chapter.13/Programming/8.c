@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-struct employee
+typedef struct employee
 {
 	int number;
 	char name[20];
 	int age;
 	char tel[20];
-};
+}Em;
 
 int main()
 {
-	struct employee e[10] =
+	Em e[10] =
 	{
 		{1, "홍길동1", 20, "111-1111"},
 		{2, "홍길동2", 25, "222-2222"},
