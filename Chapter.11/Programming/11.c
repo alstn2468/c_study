@@ -1,38 +1,66 @@
 #include <stdio.h>
-#define SIZE  10
+#define SIZE 4
 
-void merge( int* A, int* B, int* C )
+void merge(int *A, int *B, int *C, int size);
+
+int main()
 {
-  int a=0, b=0, c=0;
-  while( a < SIZE && b < SIZE )
-  {
-    if( A[a] < B[b] )
-    C[c++] = A[a++];
-    else
-    C[c++] = B[b++];
-  }
-  while( a < SIZE )
-    C[c++] = A[a++];
-  while( b < SIZE )
-    C[c++] = B[b++];
+	int a[SIZE] = { 2, 5, 7, 8 }, b[SIZE] = { 1, 3, 4, 6 }, c[SIZE * 2] = { 0 };
+
+	printf("a = ");
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		printf("%d, ", a[i]);
+	}
+	printf("\n");
+
+	printf("b = ");
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		printf("%d, ", b[i]);
+	}
+
+	printf("\n");
+
+	merge(a, b, c, SIZE);
+
+	printf("c = ");
+
+	for (int i = 0; i < (SIZE * 2); i++)
+	{
+		printf("%d, ", c[i]);
+	}
+	printf("\n");
+
+	return 0;
 }
 
-void main()
+void merge(int *A, int *B, int *C, int size)
 {
-  int i;
-  int A[SIZE] = { 2,5,8,5,3,2,3,4,8,9 };
-  int B[SIZE] = { 1,7,3,4,7,3,7,9,1,8 };
-  int C[SIZE*2] = {0,};
+	int tmp;
 
-  printf("A = ");
-  for( i=0; i<SIZE; i++ )
-    printf("%d ", A[i]);
-    printf("\nB = ");
-  for( i=0; i<SIZE; i++ )
-    printf("%d ", B[i]);
-    printf("\nC = ");
-    merge( A, B, C );
-  for( i=0; i<SIZE*2; i++ )
-    printf("%d ", C[i]);
-    printf("\n");
+	for (int i = 0; i < size; i++)
+	{
+		C[i] = A[i];
+	}
+
+	for (int i = 0; i < size; i++)
+	{
+		C[i + 4] = B[i];
+	}
+
+	for (int i = 0; i < (size * 2); i++)
+	{
+		for (int j = i + 1; j < (size * 2); j++)
+		{
+			if (C[i] > C[j])
+			{
+				tmp = C[i];
+				C[i] = C[j];
+				C[j] = tmp;
+			}
+		}
+	}
 }
