@@ -39,28 +39,26 @@ int main()
 
 void merge(int *A, int *B, int *C, int size)
 {
-	int tmp;
+	int i, a = 0, b = 0, c = 0;
 
-	for (int i = 0; i < size; i++)
+	while (a < size && b < size)
 	{
-		C[i] = A[i];
-	}
-
-	for (int i = 0; i < size; i++)
-	{
-		C[i + 4] = B[i];
-	}
-
-	for (int i = 0; i < (size * 2); i++)
-	{
-		for (int j = i + 1; j < (size * 2); j++)
+		if (A[a] < B[b])
 		{
-			if (C[i] > C[j])
-			{
-				tmp = C[i];
-				C[i] = C[j];
-				C[j] = tmp;
-			}
+			C[c++] = A[a++];
 		}
+		else
+		{
+			C[c++] = B[b++];
+		}
+
+	}
+	for (; a < size; a++)
+	{
+		C[c++] = A[a];
+	}
+	for (; b < size; b++)
+	{
+		C[c++] = B[b];
 	}
 }
