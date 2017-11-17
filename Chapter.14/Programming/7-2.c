@@ -27,11 +27,8 @@ int main()
 		for (int j = 0; j < WIDTH; j++)
 		{
 			printf("%-3d ", image[i][j]);
-			if (j >= (WIDTH - 1))
-			{
-				printf("\n");
-			}
 		}
+		printf("\n");
 	}
 
 	printf("\n");
@@ -45,11 +42,8 @@ int main()
 		for (int j = 0; j < WIDTH; j++)
 		{
 			printf("%-3d ", image[i][j]);
-			if (j >= 9)
-			{
-				printf("\n");
-			}
 		}
+		printf("\n");
 	}
 
 	return 0;

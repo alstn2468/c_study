@@ -7,9 +7,9 @@ void array_print(int a[][WIDTH]);
 
 int score[HEIGHT][WIDTH] =
 {
-	{ 100, 30, 67},
-	{ 89, 59, 12},
-	{ 19, 60, 90}
+	{ 100, 30, 67 },
+	{ 89, 59, 12 },
+	{ 19, 60, 90 }
 };
 
 int tmp[HEIGHT][WIDTH];
@@ -24,17 +24,13 @@ int main()
 
 void array_print(int a[][WIDTH])
 {
-	for(int i = 0; i < HEIGHT; i++)
+	for (int i = 0; i < HEIGHT; i++)
 	{
 		for (int j = 0; j < WIDTH; j++)
 		{
 			printf("%d ", a[i][j]);
-
-			if (j >= (WIDTH -1))
-			{
-				printf("\n");
-			}
 		}
+		printf("\n");
 	}
 }
 
