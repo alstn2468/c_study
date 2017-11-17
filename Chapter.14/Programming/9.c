@@ -66,14 +66,14 @@ int get_neighbor_count(int board[HEIGHT][WIDTH], int row, int col)
 	{
 		int *p = &(board[row][col]);
 
-		neighbor += *(p - WIDTH - 1);
-		neighbor += *(p - WIDTH);
-		neighbor += *(p - WIDTH + 1);
-		neighbor += *(p - 1);
-		neighbor += *(p + 1);
-		neighbor += *(p + WIDTH - 1);
-		neighbor += *(p + WIDTH);
-		neighbor += *(p + WIDTH + 1);
+		neighbor += p[-WIDTH - 1];
+		neighbor += p[-WIDTH];
+		neighbor += p[- WIDTH + 1];
+		neighbor += p[ - 1];
+		neighbor += p[ + 1];
+		neighbor += p[ + WIDTH - 1];
+		neighbor += p[ + WIDTH];
+		neighbor += p[+WIDTH + 1];
 	}
 
 	return neighbor;
