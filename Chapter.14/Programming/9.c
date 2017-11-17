@@ -16,7 +16,7 @@ void print_board(int board[HEIGHT][WIDTH])
 			}
 			else
 			{
-				printf("-");
+				printf("O");
 			}
 		}
 		printf("\n");
@@ -146,7 +146,8 @@ int main()
 		printf("generation %d\n", ++generation);
 
 		printf("종료하려면 q, 계속하려면 m : ");
-		scanf("%c", &user);
+		scanf(" %c", &user);
+		printf("\n");
 	} while (user != 'q');
 
 	return 0;
