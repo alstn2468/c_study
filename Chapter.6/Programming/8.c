@@ -23,7 +23,7 @@ int main()
 			ticket = 10000;
 	}
 
-	printf("요금은 %d입니다.\ㅜ", ticket);
+	printf("요금은 %d입니다.\n", ticket);
 
 	return 0;
 }
