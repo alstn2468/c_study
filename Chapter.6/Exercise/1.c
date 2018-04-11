@@ -10,13 +10,13 @@
 	(3) if(!(x!=0 && y!=1))	(4) if(x==0 | x==1)
 					답 : (2),(3)
 4. 다음의 작업을 수행하는 문장을 작성하라.
-	(a) 속도가 60km/h 이상이고 100km/h 이하이면 “정상속도”라고	    출력한다.
+	(a) 속도가 60km/h 이상이고 100km/h 이하이면 “정상속도”라고 출력한다.
 		if(spd>=60&&spd<=100) printf(“정상속도”);
 	(b) x와 y중에서 큰 값을 max에 저장하고 작은 값을 min에
 	    저장한다.
 		if(x > y) max = y; min = y;
 		else max = y; min = x;
-	(c) op가 1이면 “one”을 출력하고 op가 2이면 “two”, op가	    3이면 “three“를 출력한다.
+	(c) op가 1이면 “one”을 출력하고 op가 2이면 “two”, op가 3이면 “three“를 출력한다.
 		switch(op)
 		{
 		case 1:
@@ -41,8 +41,6 @@
 							default:
 							    x=y=0; break;
 
-
-
 	답(a) switch(x)		(b) if(code == ’X’)
 		{				x++;
 		case –1:		    else if(code == ’Y’)
@@ -56,7 +54,7 @@
 			break;
 		}
 
-6. 다음 2개의 if 문을 논리 연산자를 사용하여 하나의 if 문으로 다시   작성하라.
+6. 다음 2개의 if 문을 논리 연산자를 사용하여 하나의 if 문으로 다시 작성하라.
 	(a) if(x > 10)
 		if(x < 20)			답 : if(x>10 && x<20)
 			printf(“%d\n”,x);		  printf(“%d\n”,x);
